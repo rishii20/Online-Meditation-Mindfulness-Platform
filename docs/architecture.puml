@@ -1,0 +1,17 @@
+@startuml
+title Mindfulness System Architecture
+actor User
+actor Instructor
+actor Admin
+
+User --> Browser
+Instructor --> Browser
+Admin --> Browser
+
+Browser --> ServletController
+ServletController --> ServiceLayer
+ServiceLayer --> DAO
+DAO --> MySQL
+
+ServiceLayer --> MediaStorage
+@enduml
